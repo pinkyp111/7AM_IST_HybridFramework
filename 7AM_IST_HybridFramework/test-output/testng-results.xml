@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19219" started-at="2022-01-05T10:01:45 MST" finished-at="2022-01-05T10:02:04 MST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19219" started-at="2022-01-05T10:01:45 MST" finished-at="2022-01-05T10:02:04 MST">
+      <class name="com.testscenarios.Student_Registration">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.testscenarios.Student_Registration@7e9a5fbe]" name="beforeClass" is-config="true" duration-ms="4291" started-at="2022-01-05T10:01:45 MST" finished-at="2022-01-05T10:01:49 MST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="abc()[pri:0, instance:com.testscenarios.Student_Registration@7e9a5fbe]" name="abc" duration-ms="14864" started-at="2022-01-05T10:01:49 MST" finished-at="2022-01-05T10:02:04 MST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- abc -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testscenarios.Student_Registration@7e9a5fbe]" name="afterClass" is-config="true" duration-ms="0" started-at="2022-01-05T10:02:04 MST" finished-at="2022-01-05T10:02:04 MST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.testscenarios.Student_Registration@7e9a5fbe]" name="afterTest" is-config="true" duration-ms="1" started-at="2022-01-05T10:02:04 MST" finished-at="2022-01-05T10:02:04 MST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.testscenarios.Student_Registration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
