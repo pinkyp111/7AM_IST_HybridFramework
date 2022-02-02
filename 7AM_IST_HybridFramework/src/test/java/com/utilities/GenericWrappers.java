@@ -88,7 +88,10 @@ public class GenericWrappers extends BaseClass {
 		// move the file to local folder
 		FileHandler.copy(abc, new File(".\\screenshots\\testSample" + date() + ".PNG"));
 	}
-	
+	// To put the screenshot.PNG in a format more readable.
+	// STATUS_PackageName.Classname_Methodname_Timestamp.PNG
+	// Pass_com.testscenarios.FB_new_f_05Jan2022071655.PNG
+
 	public void selectCustomiseOptionFromTheDropdownValues(By locater, String visibleText) {
 		WebElement element = driver.findElement(locater);
 		if (element.isDisplayed()) {
@@ -96,14 +99,14 @@ public class GenericWrappers extends BaseClass {
 			if (element.isEnabled()) {
 
 				Select dropdown = new Select(element);
-				List<WebElement> dropdownValues = dropdown.getOptions();//5
+				List<WebElement> dropdownValues = dropdown.getOptions();// 5
 				// Print the size of dropdown values
 				System.out.println(dropdownValues.size());
 				// Print the dropdown values
 				for (int i = 0; i < dropdownValues.size(); i++) {
 					System.out.println(dropdownValues.get(i).getText());
-                     
-					// Select  option from the dropdown
+
+					// Select option from the dropdown
 					if (dropdownValues.get(i).getText().equals(visibleText)) {
 						dropdown.selectByIndex(i);
 						break;
@@ -117,5 +120,23 @@ public class GenericWrappers extends BaseClass {
 			System.out.println("The webelement is NOT displayed, please check**************");
 		}
 
+	}
+
+	public void selectRadioButtonByLocator(By locator) {
+		List<WebElement> radio = driver.findElements(locator);
+		System.out.println("selectRadioButtonByLocator():: List of radio buttons => "+radio.toString());
+
+		// same group of Radio buttons always have same 'Names',
+		// hence we need to use findElements method and store the list of Web elements.
+		boolean bval = false; // create a variable which will have boolean value True/False
+		bval = radio.get(0).isSelected(); // will return True if button is selected.
+		System.out.println("selectRadioButtonByLocator():: bval="+bval);
+		if (bval) {
+			radio.get(0).click(); // if the first radio button is selected by default, this will select Second
+									// radio button
+		} else {
+			radio.get(1).click(); // if the first radio button is not selected by default, the first will be
+									// selected
+		}
 	}
 }

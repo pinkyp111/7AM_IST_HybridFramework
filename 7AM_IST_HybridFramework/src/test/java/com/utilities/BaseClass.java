@@ -12,4 +12,9 @@ public class BaseClass {
 	public static int randomElement;
 	public static String timeStamp;
 	
+	public static String projectDir;
+	public static String screenshotPath;	
+	public static String  className;
+	public static String methodname;
+	
 }

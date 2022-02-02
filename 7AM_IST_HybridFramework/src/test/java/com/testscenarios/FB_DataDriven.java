@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 import com.objectrepository.Locators;
 import com.utilities.GenericWrappers;
 
-public class FB_new extends GenericWrappers {
+public class FB_DataDriven extends GenericWrappers {
 
 	@Test
 	public void fbTest() throws Exception {
@@ -42,11 +42,13 @@ public class FB_new extends GenericWrappers {
 			// driver.findElement(By.name("login")).click();
 		}
 	}
-@Test
-public void xyz() throws Exception {
-	driver.navigate().to("https://stqatools.com/demo/index.php");
-	Thread.sleep(5000);
-}
+
+	@Test
+	public void xyz() throws Exception {
+		driver.navigate().to("https://stqatools.com/demo/index.php");
+		Thread.sleep(5000);
+	}
+
 	// Cross browser testing
 	@Parameters("browsername")
 
@@ -75,19 +77,19 @@ public void xyz() throws Exception {
 		System.out.println("******************* In afterMethod() *******************");
 		screenshot();
 		
-	//	To put the screenshot.PNG in a format more readable.
-		//STATUS_PackageName.Classname_Methodname_Timestamp.PNG
-		//Pass_com.testscenarios.FB_new_f_05Jan2022071655.PNG
-		
-		projectDir=System.getProperty("user.dir");
-		screenshotPath=projectDir+"\\screenshots";
-		className= abc.getTestClass().getName().trim();
-		methodname= abc.getName().trim();	
-		if(abc.getStatus()==ITestResult.SUCCESS)
-		{
-		File mno = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(mno, new File("pass"+"_"+className+"_"+methodname + date() + ".PNG"));
-		
+
+		// To put the screenshot.PNG in a format more readable.
+		// STATUS_PackageName.Classname_Methodname_Timestamp.PNG
+		// Pass_com.testscenarios.FB_new_f_05Jan2022071655.PNG
+
+		projectDir = System.getProperty("user.dir");
+		screenshotPath = projectDir + "\\screenshots";
+		className = abc.getTestClass().getName().trim();
+		methodname = abc.getName().trim();
+		if (abc.getStatus() == ITestResult.SUCCESS) {
+			File mno = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileHandler.copy(mno, new File("pass" + "_" + className + "_" + methodname + date() + ".PNG"));
+
 		}
 	}
 

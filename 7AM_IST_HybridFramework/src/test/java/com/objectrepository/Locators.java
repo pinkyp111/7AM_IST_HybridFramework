@@ -50,5 +50,21 @@ public class Locators extends BaseClass {
 	public static final By student_pincode =  By.id("pincode");
 	public static final By student_email =  By.id("emailid");
 	public static final By student_submit=By.xpath("//input[@value='Submit Form']");
+	
+	// pizza page
+	public static final By pizza1_dropdown_opt2 = By.xpath("//*[@id='pizza1Pizza']/option[2]"); 
+	public static final By toppings1_dropdown_opt7 = By.xpath("//*[@id='pizza1']/select[2]/option[7]");
+	public static final By toppings2_dropdown_opt4 = By.xpath("//*[@id='pizza1']/select[3]/option[4]");
+	public static final By quantity_input = By.xpath("//*[@id='pizza1Qty']");
+	//*[@id="name"]
+	public static final By name_input = By.xpath("//*[@id='name']");
+	public static final By email_input = By.xpath("//*[@id='email']");
+	public static final By phone_input = By.xpath("//*[@id='phone']");
+	public static final By payment_radio_input = By.xpath("//*[@name='payment']");
+	public static final By pizza_placeOrder_button = By.xpath("//*[@id='placeOrder']");
+	public static final By pizza_successOrder_dialog = By.xpath("//*[@id='dialog']/p");
+
+
+
 
 }
